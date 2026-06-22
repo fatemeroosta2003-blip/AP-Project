@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.changers.UsernameControl"
+            stylesheets="@../../CSS/login.css"
+            styleClass="backgroundProfile"
+            prefHeight="800.0" prefWidth="1530.0">
+    <center>
+        <VBox alignment="CENTER" spacing="55">
+            <Label  text="Enter new username and confirm" textFill="aliceblue" scaleX="4" scaleY="4"/>
+            <HBox alignment="CENTER">
+                <Label text="New Username" styleClass="Label"/>
+                <TextField promptText="username" maxWidth="200" styleClass="TextField" fx:id="username"/>
+                <Label text="" fx:id="error" styleClass="transparentLabel"/>
+            </HBox>
+            <Button styleClass="Button" onMouseClicked="#changeCaptcha" style="-fx-max-width: 15; -fx-max-height: 15">
+                <graphic>
+                    <ImageView style="-fx-graphic-text-gap: 1" fitWidth="40" fitHeight="40">
+                        <Image url="@../../Images/captchaChange.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <TextField alignment="CENTER" promptText="enter captcha" maxWidth="200" fx:id="userCaptchaAnswer" styleClass="TextField"/>
+            <HBox alignment="CENTER" spacing="30">
+                <Button text="confirm" onMouseClicked="#confirmUsername" styleClass="otherButtons"/>
+                <Button text="cancel" onMouseClicked="#cancelUsername" styleClass="otherButtons"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

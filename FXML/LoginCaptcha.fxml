@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.CaptchaGraphic"
+            stylesheets="@../CSS/login.css"
+            styleClass="background"
+            prefHeight="800.0" prefWidth="1530.0">
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: -50 0 0 0">
+            <Button styleClass="Button" onMouseClicked="#changeCaptcha" style="-fx-max-width: 15; -fx-max-height: 15">
+                <graphic>
+                    <ImageView style="-fx-graphic-text-gap: 1" fitWidth="40" fitHeight="40">
+                        <Image url="@../Images/captchaChange.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <TextField alignment="CENTER" promptText="enter captcha" maxWidth="200" fx:id="userCaptchaAnswer" styleClass="TextField"/>
+            <HBox style="-fx-padding: 50 0 0 660" spacing="20">
+                <Button text="submit" onMouseClicked="#submitLogin" styleClass="otherButtons"/>
+                <Button text="back" onMouseClicked="#backToLogin" styleClass="otherButtons"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

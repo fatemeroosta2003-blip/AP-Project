@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.LoginRegisterMenuControl"
+            stylesheets="@../CSS/login.css"
+            styleClass="background"
+            prefHeight="800.0" prefWidth="1530.0">
+    <center>
+        <VBox alignment="CENTER">
+            <Label text="Register form" styleClass="Label"/>
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 0 0 0 450">
+                <Label text="username: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+                <TextField promptText="your name, for the future" fx:id="username" styleClass="TextField"/>
+                <Label styleClass="transparentLabel" fx:id="usernameErrorHandler"/>
+            </HBox>
+            <HBox fx:id="TheHbox" spacing="10" alignment="CENTER" style="-fx-padding: 0 0 0 278">
+                <Button text="random" styleClass="Button" style="-fx-min-width: 100"
+                        onMouseClicked="#chooseRandomPassword"/>
+                <Button fx:id="eye" styleClass="Button">
+                    <graphic>
+                        <ImageView style="-fx-graphic-text-gap: 1" fitWidth="40" fitHeight="40">
+                            <Image url="@../Images/eye.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label text="password: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+                <PasswordField promptText="our secret word" fx:id="password" styleClass="TextField"/>
+                <Label styleClass="transparentLabel" fx:id="passwordErrorHandler"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 0 0 0 450">
+                <Label text="nickname: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+                <TextField promptText="What should we call you, o mighty ruler?" fx:id="nickname" styleClass="TextField"
+                           style="-fx-font-size: 15"/>
+                <Label fx:id="nicknameErrorHandler" styleClass="transparentLabel"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 0 0 0 450">
+                <Label text="email: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+                <TextField promptText="so we'll be in touch" maxWidth="500" fx:id="email" styleClass="TextField"/>
+                <Label fx:id="emailErrorHandler" styleClass="transparentLabel"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 20 0 0 -65">
+                <CheckBox text="slogan" fx:id="sloganCheckBox" maxHeight="150"
+                          style="-fx-font-size: 27; -fx-text-fill: white"/>
+                <Button text="random" fx:id="randomSlogan" styleClass="Button" onMouseClicked="#chooseRandomSlogan"
+                        visible="false"/>
+                <TextField visible="false" promptText="Slogan shall you have!"
+                           fx:id="sloganTextField" styleClass="TextField" onMouseClicked="#showList"
+                           style="-fx-font-size: 15; -fx-text-fill: white"/>
+            </HBox>
+            <Label fx:id="sloganErrorHandler" styleClass="transparentLabel" maxWidth="1000"/>
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: -100 0 0 185">
+                <ListView fx:id="listView" prefHeight="50" visible="false" minWidth="300"/>
+            </HBox>
+            <HBox spacing="20" alignment="TOP_CENTER">
+                <Button text="back" styleClass="Button" onMouseClicked="#back"/>
+                <Button text="register" styleClass="Button" onMouseClicked="#validateAndRegister"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.LoginRegisterMenuControl"
+            stylesheets="@../CSS/login.css"
+            styleClass="background"
+            prefHeight="800.0" prefWidth="1530.0">
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <Label text="Welcome to StrongHold!" styleClass="Label"/>
+            <HBox alignment="CENTER" spacing="20">
+                <Button text="Login" onMouseClicked="#login" styleClass="Button"/>
+                <Button text="Register" onMouseClicked="#register"   styleClass="Button"/>
+            </HBox>
+            <Button text="Exit" onMouseClicked="#exit"  styleClass="otherButtons"/>
+        </VBox>
+    </center>
+</BorderPane>

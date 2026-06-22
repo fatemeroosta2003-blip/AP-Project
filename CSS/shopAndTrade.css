@@ -1,0 +1,243 @@
+.background {
+    -fx-background-image: url("../Images/shop.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-attachment: fixed;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-pane > .viewport {
+-fx-background-color: rgba(37, 35, 35, 0.22);
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.underlineButton {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffab00;
+    -fx-font-size: 20;
+    -fx-font-family: Arial;
+
+    -fx-border-color: transparent transparent white transparent;
+    -fx-border-width: 2;
+    -fx-border-insets: 0 0 1 0;
+    -fx-border-style: hidden hidden solid hidden;
+
+    -fx-background-radius: 20;
+}
+
+.underlineButton:hover {
+    -fx-text-fill: rgba(33, 17, 1, 0.84);
+}
+
+.message {
+    -fx-background-color: transparent;
+    -fx-font-family: Garamond;
+    -fx-font-size: 25;
+    -fx-text-fill: #eee2bb;
+    -fx-font-weight: bold;
+    -fx-min-width: 950;
+}
+
+.message:hover {
+    -fx-text-fill: gray;
+}
+
+.my-separator-class {
+    -fx-background-color: transparent;
+}
+
+
+.proName {
+    -fx-font-family: "Old English Text MT";
+    -fx-font-size: 25px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-highlight-fill: derive(-fx-control-inner-background,-20%);
+    -fx-highlight-text-fill: -fx-text-inner-color;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-cursor: text;
+    -fx-padding: 0.166667em 0em 0.333333em 0em;
+}
+
+
+.purchaseButton {
+    -fx-font-family: "Old English Text MT";
+    -fx-font-size: 22;
+    -fx-text-fill: white;
+    -fx-border-color: #988080;
+    -fx-cursor: pointer;
+    -fx-background-color: #412520;
+    -fx-max-width: 200;
+    -fx-font-weight: bold;
+}
+.purchaseButton:hover {
+    -fx-text-fill: #FFAC43;
+    -fx-border-color: #282525;
+    -fx-border-width: 4;
+    -fx-background-color: #87481E;
+}
+
+.backButton {
+    -fx-text-fill: #282525FF;
+    -fx-font-size: 20;
+    -fx-font-family: Garamond;
+    -fx-background-color: rgba(136, 89, 89, 0.65);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.backButton:hover {
+    -fx-background-color: rgba(255, 75, 75, 0.68);
+}
+
+.scroll-pane1 > .viewport {
+    -fx-background-color: rgba(73, 7, 7, 0.85);
+    -fx-border-color: linear-gradient(rgba(101, 0, 0, 0.74) 10%, rgba(155, 2, 2, 0.74) 20%, rgba(155, 57, 2, 0.74) 35%, rgba(138, 89, 0, 0.74) 45%);
+    -fx-border-width: 5;
+    -fx-border-radius: 20;
+    -fx-border-insets: 20;
+    -fx-background-insets: 20;
+    -fx-background-radius: 20;
+}
+
+.borderButton {
+    -fx-background-color: rgba(114, 79, 3, 0.72);
+    -fx-max-width: 200;
+    -fx-font-weight: bold;
+    -fx-text-fill: #282525;
+    -fx-font-size: 20;
+}
+
+.borderButton:hover {
+    -fx-background-color: rgba(162, 89, 10, 0.84);
+    -fx-max-width: 200;
+    -fx-font-weight: bold;
+    -fx-text-fill: gold;
+}
+
+.titleButton {
+    background-image: url(../Images/titles/donate.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -fx-background-color: rgb(40, 37, 37);
+    -fx-background-radius: 20;
+}
+.titleButton:hover {
+    -fx-border-color: transparent transparent #282525 transparent;
+    -fx-border-width: 2;
+    -fx-border-insets: 0 0 1 0;
+    -fx-border-style: hidden hidden solid hidden;
+}
+
+.Button{
+    -fx-font-family: "Brush Script MT";
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-background-color:
+            #a0becb,
+            linear-gradient(black, black),
+            linear-gradient(#7c0a02 25%,  #b22222  50%, #c24914 75% ,  #ed9728 100%);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-cursor: "Hand";
+}
+
+.Button:hover {
+    -fx-background-color:
+            #a0becb,
+            linear-gradient(#ffffff, #e8f5fc),
+            linear-gradient(#de5770 10%, #d71633 25%, #8a021a 50%, #3c010c 75% , #200408 100%);
+}
+
+.acceptButton {
+    -fx-font-family: Garamond;
+    -fx-font-size: 28;
+    -fx-text-fill: white;
+    -fx-background-color:
+            linear-gradient(black, black),
+            linear-gradient(#ADC9C5 25%, #6CB0A8 50%,#16796F  75% , #10564F  100%);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-cursor: "Hand";
+}
+
+.acceptButton:hover {
+    -fx-background-color:
+            linear-gradient(black, black),
+            linear-gradient(#10564F 25%, #16796F 50%, #6CB0A8 75% , #ADC9C5 100%);
+}
+
+.rejectButton {
+    -fx-font-family: Garamond;
+    -fx-font-size: 28;
+    -fx-text-fill: white;
+    -fx-background-color:
+            linear-gradient(black, black),
+            linear-gradient(#fa769b 25%, #da2d2d 50%, #cc0022 75% , #8f0028  100%);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-cursor: "Hand";
+}
+
+.rejectButton:hover {
+    -fx-background-color:
+            linear-gradient(black, black),
+            linear-gradient(#8f0028 25%, #cc0022 50%, #da2d2d 75% , #fa769b 100%);
+}
+
+

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.ShopMenuControl"
+            stylesheets="@../CSS/shopAndTrade.css"
+            styleClass="background"
+            prefHeight="800.0" prefWidth="1530.0">
+    <left>
+        <HBox style="-fx-padding: 30 0 0 30">
+            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="60" fitHeight="60">
+                <Image url="@../Images/resources/coin.png"/>
+            </ImageView>
+            <Label fx:id="currentgold" text="0"
+                   style="-fx-padding: 10 0 0 15; -fx-font-size: 35px; -fx-text-fill: #f5ed90;"/>
+        </HBox>
+    </left>
+    <center>
+        <VBox  style="-fx-padding: 20 0 0 500" spacing="20">
+            <HBox>
+            <ImageView style="-fx-graphic-text-gap: 1;" fitWidth="198" fitHeight="102">
+                <Image url="@../Images/titles/shop.png"/>
+            </ImageView>
+            </HBox>
+            <ScrollPane maxWidth="460" maxHeight="640"
+                        style="-fx-background-color: transparent; -fx-padding: 0 0 0 -270">
+                <VBox style="-fx-background-color: transparent;">
+                    <HBox>
+                    <Button text="back to game" styleClass="backButton" minWidth="350" onMouseClicked="#backToGame"/>
+                    <Button text="Enter trade menu" styleClass="backButton" minWidth="350" onMouseClicked="#enterTrade"/>
+                    </HBox>
+                    <HBox style="-fx-background-color: rgba(243,219,135,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="95" fitHeight="95">
+                                <Image url="@../Images/resources/bread.png"/>
+                            </ImageView>
+                            <Label text="bread" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="breadstock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -105">
+                            <Button text="buy bread" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell bread" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -100">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 26" styleClass="proName"/>
+                            <Label text="sell: 6" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(234,174,84,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/meat.png"/>
+                            </ImageView>
+                            <Label text="meat" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="meatstock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -65">
+                            <Button text="buy meat" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell meat" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -80">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 18" styleClass="proName"/>
+                            <Label text="sell: 6" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(243,219,135,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="95" fitHeight="95">
+                                <Image url="@../Images/resources/apple.png"/>
+                            </ImageView>
+                            <Label text="apple" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="applestock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -100">
+                            <Button text="buy apple" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell apple" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -100">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 12" styleClass="proName"/>
+                            <Label text="sell: 6" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(234,174,84,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="85" fitHeight="85">
+                                <Image url="@../Images/resources/cheese.png"/>
+                            </ImageView>
+                            <Label text="cheese" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="cheesestock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -80">
+                            <Button text="buy cheese" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell cheese" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -90">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 22" styleClass="proName"/>
+                            <Label text="sell: 6" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(243,219,135,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/stone.png"/>
+                            </ImageView>
+                            <Label text="stone" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="stonestock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -60">
+                            <Button text="buy stone" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell stone" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -80">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 40" styleClass="proName"/>
+                            <Label text="sell: 10" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(234,174,84,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/ale.png"/>
+                            </ImageView>
+                            <Label text="ale" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="alestock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -60">
+                            <Button text="buy ale" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell ale" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -80">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 60" styleClass="proName"/>
+                            <Label text="sell: 20" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(243,219,135,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="95" fitHeight="95">
+                                <Image url="@../Images/resources/flour.png"/>
+                            </ImageView>
+                            <Label text="flour" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="flourstock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -100">
+                            <Button text="buy flour" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell flour" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -100">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 240" styleClass="proName"/>
+                            <Label text="sell: 10" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(234,174,84,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="95" fitHeight="95">
+                                <Image url="@../Images/resources/hops.png"/>
+                            </ImageView>
+                            <Label text="hops" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="hopsstock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -100">
+                            <Button text="buy hops" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell hops" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -100">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 40" styleClass="proName"/>
+                            <Label text="sell: 4" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(243,219,135,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="95" fitHeight="95">
+                                <Image url="@../Images/resources/iron.png"/>
+                            </ImageView>
+                            <Label text="iron" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="ironstock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -100">
+                            <Button text="buy iron" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell iron" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -100">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 40" styleClass="proName"/>
+                            <Label text="sell: 20" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(243,219,135,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="95" fitHeight="95">
+                                <Image url="@../Images/resources/wheat.png"/>
+                            </ImageView>
+                            <Label text="wheat" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="wheatstock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -100">
+                            <Button text="buy wheat" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell wheat" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -100">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 180" styleClass="proName"/>
+                            <Label text="sell: 5" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox style="-fx-background-color: rgba(243,219,135,0.38); -fx-padding: 0 0 0 20; -fx-min-height: 150;">
+                        <VBox style="-fx-padding: 10 0 0 0">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="95" fitHeight="95">
+                                <Image url="@../Images/resources/wood.png"/>
+                            </ImageView>
+                            <Label text="wood" styleClass="proName" style="-fx-padding: -10 0 0 20"/>
+                            <Label text="0" fx:id="woodstock" styleClass="proName" style="-fx-padding: -10 0 0 40"
+                                   alignment="CENTER"/>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="15"
+                              style="-fx-min-width: 582; -fx-max-width: 582; -fx-padding: 0 0 0 -100">
+                            <Button text="buy wood" styleClass="purchaseButton" onMouseClicked="#buy"/>
+                            <Button text="sell wood" styleClass="purchaseButton" onMouseClicked="#sell"/>
+                        </VBox>
+                        <VBox style="-fx-padding: 10 0 0 -100">
+                            <ImageView style="-fx-graphic-text-gap: 1" fitWidth="75" fitHeight="75">
+                                <Image url="@../Images/resources/coin.png"/>
+                            </ImageView>
+                            <Label text="buy: 10" styleClass="proName"/>
+                            <Label text="sell: 5" styleClass="proName" style="-fx-padding: -10 0 0 0"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+</BorderPane>

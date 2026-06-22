@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.ForgotPassword"
+            stylesheets="@../CSS/login.css"
+            styleClass="background"
+            prefHeight="800.0" prefWidth="1530.0">
+  <center>
+      <VBox alignment="CENTER">
+          <Label text="Password Recovery" styleClass="Label"/>
+          <HBox spacing="10" alignment="CENTER">
+              <Label text="security answer: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+              <TextField promptText="answer is..." fx:id="answer" styleClass="TextField"/>
+          </HBox>
+          <HBox spacing="10" alignment="CENTER" >
+              <Label text="New password: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+              <TextField promptText="username..." fx:id="username" styleClass="TextField"/>
+              <Label styleClass="transparentLabel" fx:id="usernameHandler"/>
+          </HBox>
+          <HBox spacing="10" alignment="CENTER" >
+              <Label text="New password: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+              <PasswordField promptText="password..." fx:id="newPass" styleClass="PasswordField"/>
+              <Label styleClass="transparentLabel" fx:id="passwordErrorHandler"/>
+          </HBox>
+          <HBox spacing="10" alignment="CENTER" >
+              <Label text="Re-enter password: " styleClass="Label" maxWidth="400" maxHeight="50" style="-fx-font-size: 25"/>
+              <PasswordField promptText="password..." fx:id="reNewPass" styleClass="PasswordField"/>
+              <Label styleClass="transparentLabel" fx:id="passwordErrorHandler2"/>
+          </HBox>
+          <Button text="Submit" styleClass="Button" onMouseClicked="#forgotValidate"/>
+          <Button text="back" styleClass="otherButtons" onMouseClicked="#back"/>
+      </VBox>
+  </center>
+</BorderPane>

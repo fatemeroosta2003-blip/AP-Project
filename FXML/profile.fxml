@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.ProfileControl"
+            stylesheets="@../CSS/login.css"
+            styleClass="backgroundProfile"
+            prefHeight="800.0" prefWidth="1530.0">
+        <center>
+            <VBox alignment="TOP_CENTER">
+                <Label text="username" fx:id="username" styleClass="LabelProfile"/>
+                <Label text="nickname" fx:id="nickname" styleClass="LabelProfile"/>
+                <Label text="email" fx:id="email" styleClass="LabelProfile"/>
+                <Label text="slogan" fx:id="slogan" styleClass="LabelProfile"/>
+                <Button text="change username" onMouseClicked="#usernameChange" styleClass="ButtonProfile"/>
+                <Button text="change password" onMouseClicked="#passwordChange" styleClass="ButtonProfile"/>
+                <Button text="change nickname" onMouseClicked="#nicknameChange" styleClass="ButtonProfile"/>
+                <Button text="change email" onMouseClicked="#emailChange" styleClass="ButtonProfile"/>
+                <Button text="change slogan" onMouseClicked="#sloganChange" styleClass="ButtonProfile"/>
+                <Button text="logout" onMouseClicked="#logout" styleClass="ButtonProfile"/>
+                <Button text="back" onMouseClicked="#back" styleClass="ButtonProfile"/>
+            </VBox>
+
+        </center>
+</BorderPane>

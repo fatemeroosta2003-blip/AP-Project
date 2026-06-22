@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.controls.LoginRegisterMenuControl"
+            stylesheets="@../CSS/login.css"
+            styleClass="background"
+            prefHeight="800.0" prefWidth="1530.0">
+    <top>
+        <VBox alignment="BASELINE_CENTER" spacing="10">
+            <Label alignment="BOTTOM_CENTER" styleClass="LabelProfile" text="Please choose your avatar." textFill="whitesmoke" scaleY="3" scaleX="3" style="-fx-font-weight: bold"/>
+            <Button text="random avatar" onMouseClicked="#randomAvatar" styleClass="Button"/>
+            <Button text="choose my avatar" onMouseClicked="#chooseMyAvatar" styleClass="Button"/>
+        </VBox>
+    </top>
+    <center>
+        <TilePane>
+        </TilePane>
+    </center>
+
+</BorderPane>

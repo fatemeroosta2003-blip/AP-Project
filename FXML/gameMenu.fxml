@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.controls.GameMenuControl"
+      stylesheets="@../CSS/game.css"
+      styleClass="background"
+      prefHeight="800.0" prefWidth="1530.0">
+</Pane>

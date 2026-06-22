@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.controls.TradeMenuControl"
+      stylesheets="@../CSS/shopAndTrade.css"
+      styleClass="background"
+      prefHeight="800.0" prefWidth="1530.0">
+    <HBox style="-fx-padding: 30 0 0 30">
+        <ImageView style="-fx-graphic-text-gap: 1" fitWidth="60" fitHeight="60">
+            <Image url="@../Images/resources/coin.png"/>
+        </ImageView>
+        <Label fx:id="currentGold" text="0"
+               style="-fx-padding: 10 0 0 15; -fx-font-size: 35px; -fx-text-fill: #f5ed90;"/>
+    </HBox>
+
+    <ScrollPane minWidth="1000" minHeight="650" maxHeight="650" maxWidth="1000" layoutY="115" layoutX="300"
+                style="-fx-background-color: transparent;" styleClass="scroll-pane1">
+        <VBox spacing="5">
+            <Label text="Trade"
+                   style="-fx-font-family: x fantasy; -fx-text-fill: EEE2BBFF; -fx-padding: 0 0 0 30; -fx-font-weight: bold; -fx-font-size: 15"/>
+
+            <Label text="this is it" fx:id="message1" visible="false" onMouseClicked="#enterMassage" styleClass="message"
+                   style="-fx-padding: 25 0 0 45" maxWidth="960"/>
+            <Separator fx:id="sep1" visible="false" styleClass="my-separator-class" style="-fx-padding: 0 0 0 27"
+                       maxWidth="970"/>
+
+        </VBox>
+    </ScrollPane>
+    <HBox style="-fx-background-color: transparent;" layoutX="700" layoutY="750" spacing="15">
+        <Button text="back" styleClass="borderButton" onMouseClicked="#backToTrade"/>
+    </HBox>
+</Pane>
